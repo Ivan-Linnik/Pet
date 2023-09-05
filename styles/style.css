@@ -1204,13 +1204,14 @@ li[class*=vite]::before {
 
 .calc-screen {
   grid-column: 1/-1;
-  padding-right: 1rem;
-  font: 3rem "inter Light";
+  padding-right: 15px;
+  font: 3rem "Inter Light";
   letter-spacing: 5px;
   text-align: right;
   border: none;
   background-color: transparent;
   color: inherit;
+  opacity: 1;
   text-overflow: ellipsis;
 }
 .calc-screen::placeholder {
@@ -1224,13 +1225,13 @@ li[class*=vite]::before {
 
 .calc-body > button {
   font: 2rem "Inter Thin";
+  user-select: none;
+  appearance: none;
+  -webkit-apearance: none;
   border: 0.1px solid #212121;
   background-color: inherit;
   color: inherit;
   cursor: pointer;
-  user-select: none;
-  appearance: none;
-  --webkit-apearance: none;
 }
 .calc-body > button:active {
   border-color: transparent;
