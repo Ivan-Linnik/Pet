@@ -1,0 +1,177 @@
+//===============Fonts================//
+@import "../styles/service/font-faces";
+
+//================Variables===============//
+$text-color-white: #fafafa;
+$text-color-black: #212121;
+
+//=====================Presets=======================//
+@import "../styles/service/style-reset";
+@import "../styles/service/adjustments";
+@import "../styles/service/adaptive-mixins";
+
+//============Layout Main Blocks=============================//
+@import "../styles/sections/header";
+@import "../styles/sections/main";
+
+//=============Sections===========//
+@import "../styles/sections/about-me-section";
+@import "../styles/sections/my-works-section";
+
+//=====================HTML & body========================//
+:root {
+    font: 16px 'Inter Regular', sans-serif;
+
+    color: $text-color-black;
+    background-color: $text-color-white;
+
+    @include mobile {
+        font-size: 12px;
+    }
+
+    @include tablet {
+        font-size: 14px;
+    }
+
+}
+
+.lock {
+    overflow: hidden;
+}
+
+.hidden {
+    z-index: 0;
+}
+
+//====================Themes of document=======================//
+[dark] {
+    color: $text-color-white;
+    background-color: $text-color-black;
+}
+
+[dark] * {
+    border-color: $text-color-white;
+    color: $text-color-white;
+
+    .header {
+        background-color: $text-color-black;
+    }
+
+    .header__burger {
+
+        &::before,
+        &::after {
+            background-color: $text-color-white;
+        }
+
+        .burger-middle {
+            background-color: $text-color-white;
+        }
+    }
+
+    .header__service {
+        background-color: $text-color-black;
+    }
+
+    .header__navigation::after {
+
+        border-color: $text-color-white;
+    }
+
+    .navigation-list__item {
+        &:last-child {
+            &::before {
+                background-color: $text-color-white;
+            }
+        }
+    }
+
+    .lng-nav__contacts {
+        &::after {
+            border-top: 1px solid $text-color-white;
+            border-right: 1px solid $text-color-white;
+        }
+    }
+
+    .activeNavLink {
+        background-color: $text-color-white;
+        color: $text-color-black;
+    }
+
+    .contacts__link::before {
+        background-color: $text-color-white;
+    }
+
+    .contacts__item {
+        background-color: $text-color-white;
+
+        &::before {
+            background-color: $text-color-black;
+        }
+    }
+
+    .toggles {
+        &::before {
+            border-color: $text-color-white;
+        }
+    }
+
+    .content {
+        background-color: $text-color-black;
+    }
+
+    .section>* {
+        color: $text-color-white;
+    }
+
+    .photo-frame,
+    .about-me__image-container {
+        border-color: #2087b0;
+    }
+
+    .worker-info__profession,
+    .worker-info__age-city {
+        background-color: $text-color-white;
+        color: $text-color-black;
+    }
+
+    .main-button {
+        &:hover {
+            background-color: $text-color-white;
+            color: $text-color-black;
+        }
+    }
+
+    .skill-item {
+        &::before {
+            color: $text-color-black;
+            background-color: $text-color-white;
+        }
+    }
+
+    .swiper-pagination-bullet {
+        background-color: $text-color-white !important;
+    }
+
+    .calc-screen {
+        &::placeholder {
+            color: $text-color-white;
+        }
+    }
+
+    .calc-body>button {
+        border: 0.1px solid $text-color-white;
+
+        &:active {
+            border-color: transparent;
+        }
+    }
+
+    .button-operator,
+    .clear-one,
+    .all-clear {
+        &:active {
+            border: 0.1px solid $text-color-white !important;
+        }
+    }
+}
