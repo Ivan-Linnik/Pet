@@ -1182,11 +1182,11 @@ li[class*=vite]::before {
   min-height: 300px;
   width: 350px;
   height: 450px;
-  padding: 5px;
+  padding: 4px;
   margin-bottom: 50px;
   display: grid;
   grid-template: 5rem repeat(5, 1fr)/repeat(4, 1fr);
-  gap: 5px;
+  gap: 4px;
   border: 0.1px solid #212121;
 }
 @media screen and (max-width: 480px) {
@@ -1434,7 +1434,7 @@ button[value="0"] {
   color: #fafafa;
 }
 [dark] * .calc-body > button {
-  border: 0.1px solid #fafafa;
+  border-color: #fafafa;
 }
 [dark] * .calc-body > button:active {
   border-color: transparent;

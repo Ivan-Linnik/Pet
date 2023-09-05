@@ -160,7 +160,7 @@ $text-color-black: #212121;
     }
 
     .calc-body>button {
-        border: 0.1px solid $text-color-white;
+        border-color: $text-color-white;
 
         &:active {
             border-color: transparent;
