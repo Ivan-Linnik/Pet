@@ -73,7 +73,15 @@ const wordsOnPage = {
     ru: 'react список дел',
     en: 'react todo app',
   },
+  weatherApp: {
+    ru: 'приложение погоды',
+    en: 'weather app',
+  },
   tryApp: {
+    ru: 'страница приложения',
+    en: 'application page',
+  },
+  tryBtn: {
     ru: 'страница приложения',
     en: 'application page',
   },
@@ -453,31 +461,3 @@ function startCalculator(event) {
     return calculations.result;
   }
 }
-
-//========================Check for fetching todo app===========================//
-const appBlock = document.querySelector('.react-app');
-const objectTag = document.querySelector('.lindo');
-const url = 'https://ivan-linnik.github.io/Lindo/';
-
-let request = fetch(url)
-  .then((response) => {
-    if (response.status === 200) {
-      objectTag.setAttribute('data', url);
-    } else {
-      return;
-    }
-  })
-  .catch((error) => {
-    console.log(error.message);
-
-    let appBlockErrorText = document.createElement('span');
-
-    appBlockErrorText.innerText = !langSwitcher.checked
-      ? 'Упс... Сервер не отвечает. Нажмите кнопку ниже.'
-      : "Ups... Server isn't responding. Push button bellow.";
-
-    appBlockErrorText.className = 'error-message';
-
-    objectTag.remove();
-    appBlock.appendChild(appBlockErrorText);
-  });

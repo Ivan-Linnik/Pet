@@ -1287,7 +1287,7 @@ button[value="0"] {
   background-color: #212121 !important;
 }
 
-.react-app {
+.block__content__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1298,39 +1298,37 @@ button[value="0"] {
   margin-bottom: 50px;
 }
 
-.lindo {
+.content__img-wrapper {
   width: 350px;
-  height: 350px;
-  filter: saturate(0);
-  transition: all 0.2s ease-in-out;
+  height: 450px;
+  max-height: fit-content;
+  overflow: hidden;
   cursor: pointer;
 }
-.lindo:hover {
-  height: 550px;
-  filter: saturate(100%);
-}
 @media screen and (max-width: 330px) {
-  .lindo {
+  .content__img-wrapper {
     width: 300px;
     height: 400px;
   }
 }
 
-.react-app .main-button {
-  padding: 10px;
-  font-size: 1rem;
-}
-
-.error-message {
-  order: -1;
+.content__img-wrapper img {
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  font: 2rem "Inter Thin";
-  text-align: center;
+  object-fit: cover;
+}
+
+._todo {
+  object-position: 45% 10px;
+}
+
+._weather {
+  object-position: 0 10px;
+}
+
+.block__content__wrapper .main-button {
+  padding: 10px;
+  font-size: 1rem;
 }
 
 :root {
